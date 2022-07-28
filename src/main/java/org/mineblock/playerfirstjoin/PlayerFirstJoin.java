@@ -11,14 +11,14 @@ public class PlayerFirstJoin extends JavaPlugin {
     @Override
     public void onLoad() {
         saveDefaultConfig();
-        if (PlayerFirstJoin.INSTANCE.getConfig().getBoolean("on-first-join.written-books.enabled")) {
-            PlayerFirstJoin.INSTANCE.saveResource("rules.txt", false);
-        }
     }
 
     @Override
     public void onEnable() {
         INSTANCE = this;
+        if (PlayerFirstJoin.INSTANCE.getConfig().getBoolean("on-first-join.written-books.enabled")) {
+            PlayerFirstJoin.INSTANCE.saveResource("rules.txt", false);
+        }
         getServer().getPluginManager().registerEvents(new PlayerFirstJoinListener(this), this);
     }
 
