@@ -7,3 +7,4 @@ authors:
   - MineBlock Team.
 website: www.mineblock.cc
 prefix: MineBlockPlugin
+api-version: 1.13
